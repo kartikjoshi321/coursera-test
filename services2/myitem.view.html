@@ -1,0 +1,33 @@
+<html lang="en" ng-app="mymade">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js" type="text/javascript"></script>
+    <script src="myitem.controller.js"></script>
+    <script src="myitem.services.js"></script>
+  </head>
+  <body>
+    <div ng-controller="myCon as num">
+      <label>Food:</label>
+      <input type="text" ng-model="num.food">
+
+      <label>Quantity:</label>
+      <input type="text" ng-model="num.quantity">
+      
+      <button ng-click="num.AddIt()">Add Value</button>
+    </div>
+    <div ng-controller="myCont as khana">
+      <ol>
+        <li ng-repeat="item in khana.items">
+          {{item.food}} of {{item.quantity}}quantity.
+          <button style="margin-right:25px;" ng-click="khana.remove($index)">Remove Value</button>
+        </li>
+      </ol>
+
+
+    </div>
+
+  </body>
+</html>

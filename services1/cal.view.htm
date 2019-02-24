@@ -1,0 +1,21 @@
+<html lang="en" ng-app="mymade">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js" type="text/javascript"></script>
+  <script src="cal.controller.js"></script>
+  <script src="cal.services.js"></script>
+</head>
+<body ng-controller="myCon as num">
+  <input type="text" ng-model="num.first">
+  {{num.first}}
+  <input type="text" ng-model="num.second">
+  {{num.second}}
+  <button ng-click="num.AddIt()">Add Value</button>
+  <p>
+    Result:{{num.result}}
+  </p>
+</body>
+</html>
