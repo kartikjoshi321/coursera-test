@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js" type="text/javascript"></script>
+  <script src="try.controller.js"></script>
+  <script src="try.service.js"></script>
 </head>
 <body ng-app="myApp" ng-controller="myController as ctrl1">
-    <input type="text" ng-model="ctrl.txt1"/>
+    <input type="text" ng-model="ctrl1.txt1"/>
 
     <button ng-click="ctrl1.try_click()">Add</button>
     <br><br>
-    {{ctrl.txt1}}
-
+    <p>
+      {{ctrl1.txt2}}
+    </p>
 </body>
 </html>
