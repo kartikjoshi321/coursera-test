@@ -16,17 +16,20 @@
     <div ng-controller='MenuCategoriesController as menu'>
       <h3>List of Menu Categories</h3>
       <ul>
-        <li ng-repeat="category in menu.categories">
-          (<a href="" ng-click="menu.logMenuItems(category.short_name);">{{ category.short_name }}</a>)
-          {{ category.name }}
-        </li>
+
+        <my-event ng-repeat="category in menu.categories"></my-event>
       </ul>
       <br /><br />
-      <pre>
+
+      <my-tag></my-tag>
+      <!--<pre>
         {{menu.short_name}}
       </pre>
-
+    -->
     </div>
+
+
+
 
   </body>
 </html>

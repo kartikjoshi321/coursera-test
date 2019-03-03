@@ -29,3 +29,21 @@ item.short_name='';
 
     };
 }]);
+
+myApp.directive('myTag',mymakedirective);
+myApp.directive('myEvent',makemycall);
+
+function mymakedirective(){
+  var doo={
+    template:'<pre>{{menu.short_name}}</pre>'
+  };
+  return doo;
+}
+
+function makemycall(){
+  var doo={
+    templateUrl:'mydirective.html'
+  };
+  return doo;
+
+}
