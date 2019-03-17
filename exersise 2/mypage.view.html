@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Using $http Service</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js" type="text/javascript"></script>
+    <script src="mypage.controller.js"></script>
+  </head>
+  <body>
+    <div ng-controller="myController as ctrl"
+    style="width:50%;float:left;"
+    >
+
+
+        <my-page></my-page>
+
+
+        <input type="text" ng-model="ctrl.txt1"/>
+        <input type="text" ng-model="ctrl.txt2"/>
+
+        <button ng-click="ctrl.additem();">Add Item</button>
+
+        <p>{{ctrl.message}}</p>
+
+
+      <div>
+        <ol>
+          <li ng-repeat="list in ctrl.item">
+            {{list.food}} on {{list.quantity}}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <list-direction atom="ctrl"></list-direction>
+          </li>
+
+        </ol>
+      </div>
+    </div>
+
+
+    <div ng-controller="myController1 as ctrl1" style="width:50%;float:left;">
+
+        <my-page></my-page>
+
+        <input type="text" ng-model="ctrl1.txt1"/>
+        <input type="text" ng-model="ctrl1.txt2"/>
+
+        <button ng-click="ctrl1.additem();">Add Item</button>
+
+      <div>
+        <ol>
+          <li ng-repeat="list in ctrl1.item">
+            {{list.food}} on {{list.quantity}}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <list-direction atom="ctrl1"></list-direction>
+          </li>
+
+        </ol>
+      </div>
+      <p style="color:red; font-size:25px;">{{ctrl1.message}}</p>
+
+    </div>
+  </body>
+</html>

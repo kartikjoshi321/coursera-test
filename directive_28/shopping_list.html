@@ -1,0 +1,10 @@
+<h3>{{ List.title }}</h3>
+<ol>
+  <li ng-repeat="item in List.items">
+    {{ item.quantity }} of {{ item.name }}
+    <!--<button ng-click="list.removeItem($index);">Remove Item</button>-->
+  </li>
+</ol>
+<div style="color:red; font-size:40px;" ng-if="List.cookieTest()">
+  ---WARNING WARNING WARNING---
+</div>
